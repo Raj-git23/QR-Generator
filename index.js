@@ -42,12 +42,17 @@ function shareQR() {
 }
 
 function downloadQR() {
-    html2canvas(document.body).then(canvas => {
+    if (qrText.value.length > 0) {
         let link = document.createElement("a");
+
+        link.href = qrImg.src;
+
+        link.download = "qrcode.png";
+
         document.body.appendChild(link);
-        link.href = canvas.toDataURL("image/png");
-        link.download = "page_snapshot.png";
         link.click();
+
         document.body.removeChild(link);
-    });
+    }
 }
+
