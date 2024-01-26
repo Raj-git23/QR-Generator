@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <p>Add your Text or URL :- </p>
+        <input type="text" placeholder="Text or URL" id="qrText">
+
+        <div id="ImgBox">
+            <img src="" id="qrImg">
+        </div>
+
+        <button onclick="generateQR()" id="btn">Generate QR Code</button>
+
+        <button onclick="shareQR()" id="shareBtn" class="hidden">Share QR Code</button>
+
+        <button onclick="downloadQR()" id="downloadbtn" class="hidden">Download QR Code</button>
+
+    </div>
+
+
+    <script src="./index.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+
+</html>
